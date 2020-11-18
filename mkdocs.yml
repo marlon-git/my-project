@@ -1,0 +1,5 @@
+site_name: SMART SecModel
+nav:
+    - Home: index.md
+    - About: about.md
+theme: readthedocs
