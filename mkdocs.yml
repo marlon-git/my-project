@@ -1,4 +1,4 @@
-site_name: SMART SecModel
+site_name: Test MkDocs
 nav:
     - Home: index.md
     - About: about.md
