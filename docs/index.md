@@ -8,11 +8,11 @@ It's very easy to make some words **bold** and other words *italic* with Markdow
   
 ### Headers
 
-## This is an h2 tag
-
 ### This is an h3 tag
+
+#### This is an h4 tag
   
-### Emphasis
+## Emphasis
 
 *This text will be italic*
 _This will also be italic_
@@ -22,7 +22,7 @@ __This will also be bold__
 
 _You **can** combine them_
   
-### Lists
+## Lists
   
 Unordered
 
@@ -39,28 +39,28 @@ Ordered
    1. Item 3a
    1. Item 3b
   
-### Images
+## Images
 
 ![DataCenter](./images/WP_serverfarm_Putman_dektop.jpg)
 
-### Links
+## Links
 
 <http://github.com> - automatic!
 [GitHub](http://github.com)
 
-### Blockquotes
+## Blockquotes
 
 As Kanye West said:
 
 > We're living the future so
 > the present is our past.
 
-### In line code
+## In line code
 
 I think you should use an
 `<addr>` element here instead.
 
-### Tables
+## Tables
 
 First Header | Second Header
 ------------ | -------------
