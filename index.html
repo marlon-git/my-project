@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>SMART SecModel</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> SMART SecModel</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#links">Links</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scope-of-the-security-model-and-environment">Scope of the Security Model and Environment</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referenced-other-pratices">Referenced Other Pratices</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#server-roles">Server Roles</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#production">Production</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#acceptancedevelopment">Acceptance/Development</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#security-configuration-for-the-production-environment">Security Configuration for the Production Environment</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#roles-and-associated-domain-accounts">Roles and Associated Domain Accounts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#domain-global-groups">Domain Global Groups</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#server-local-accounts">Server Local Accounts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#server-local-groups">Server Local Groups</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#services">Services</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#folder-share-permissions">Folder / Share Permissions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#databases-roles">Databases Roles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#database-permissions">Database Permissions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#database-jobs">Database Jobs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#computer-andor-user-group-policy-objects">Computer and/or User Group Policy Objects</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#registry-modifications">Registry Modifications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#middleware-settings-iis-virtual-directories">Middleware Settings - IIS Virtual Directories</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scheduled-tasks">Scheduled Tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ecm-monitoring">ECM Monitoring</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#security-configuration-for-the-acceptance-development-environment">Security Configuration for the Acceptance / Development Environment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#roles-and-associated-domain-accounts_1">Roles and Associated Domain Accounts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#domain-global-groups_1">Domain Global Groups</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#server-local-accounts_1">Server Local Accounts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#server-local-groups_1">Server Local Groups</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#services_1">Services</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#folder-share-permissions_1">Folder / Share Permissions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#databases-roles_1">Databases Roles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#database-permissions_1">Database Permissions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#database-jobs_1">Database Jobs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#computer-andor-user-group-policy-objects_1">Computer and/or User Group Policy Objects</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#registry-modifications_1">Registry Modifications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#middleware-settings-iis-virtual-directories_1">Middleware Settings - IIS Virtual Directories</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scheduled-tasks_1">Scheduled Tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ecm-monitoring_1">ECM Monitoring</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="about/">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">SMART SecModel</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="security-model-automation-remediation-tool-smart">Security Model Automation Remediation Tool (SMART)</h1>
+<h2 id="links">Links</h2>
+<p>DBM ID: <a href="https://carta.xom.com/CARTA/Application.aspx?alfa_param=0W3z2pufeI3h5Vit2ZLi5pYHjasdzAM73JRM76RbMtHMwtDtuiAiW8YxCbdXmb2ekYxVY7IYIAqlxSes9f4sKT1QlijvFj3CfMbVe8fApCGVIs61TV8ogkKXiq%2BPkRT2Mjq0ENK43E7vvb5aXhBixQ%3D%3D">APP-8643</a></p>
+<p>Production: <a href="http://goto/onpremiaas">http://goto/onpremiaas</a></p>
+<p>Development: <a href="http://goto/onpremiaas">http://goto/onpremiaasdev</a></p>
+<hr />
+<h2 id="scope-of-the-security-model-and-environment">Scope of the Security Model and Environment</h2>
+<p>Application that enable the customer to apply/enforce Windows Local Groups permissions on their servers.</p>
+<ul>
+<li>Windows 2012 and higher.</li>
+</ul>
+<h2 id="referenced-other-pratices">Referenced Other Pratices</h2>
+<hr />
+<p><a href="https://anypoint.mulesoft.com/exchange/a31966b0-fc4e-4ac8-af23-c40fc73ce072/how-to---things-you-should-know/">Mulesoft APIs Best Pratices</a></p>
+<p><a href="https://anypoint.mulesoft.com/exchange/a31966b0-fc4e-4ac8-af23-c40fc73ce072/continuous-integrationdelivery-pipeline-overview/">Publish API to openshift</a></p>
+<p><a href="http://goto/dbamdocs">DBAM Documentation</a></p>
+<h2 id="server-roles">Server Roles</h2>
+<hr />
+<h3 id="production">Production</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Server Role</th>
+<th align="center">Server Names</th>
+<th align="center">Location</th>
+<th align="center">Description of Role</th>
+<th align="center">Machine Group Membership</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Database Server</td>
+<td align="center">HOESQL041</td>
+<td align="center">Houston / NA / Standard Server</td>
+<td align="center">Host Production Database</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">---</td>
+<td align="center">---</td>
+<td align="center">---</td>
+<td align="center">---</td>
+<td align="center">---</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="acceptancedevelopment">Acceptance/Development</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Server Role</th>
+<th align="center">Server Names</th>
+<th align="center">Location</th>
+<th align="center">Description of Role</th>
+<th align="center">Machine Group Membership</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Database Server</td>
+<td align="center">HOESQL042</td>
+<td align="center">Houston / NA / Standard Server</td>
+<td align="center">Host Development Database</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">Database Server</td>
+<td align="center">HOESQL1611</td>
+<td align="center">Houston / NA / Standard Server</td>
+<td align="center">Host Development Database</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">---</td>
+<td align="center">---</td>
+<td align="center">---</td>
+<td align="center">---</td>
+<td align="center">---</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="security-configuration-for-the-production-environment"><strong>Security Configuration for the Production Environment</strong></h2>
+<h3 id="roles-and-associated-domain-accounts">Roles and Associated Domain Accounts</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Account Role</th>
+<th align="center">Owner</th>
+<th align="center">Scope of Role</th>
+<th align="center">Member of</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">NA\xswinge</td>
+<td align="center">DCC1</td>
+<td align="center">Mulesoft API / Database Server</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">NA\xswingeprd</td>
+<td align="center">DCC1</td>
+<td align="center">Mulesoft API / Database Server</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">---</td>
+<td align="center">---</td>
+<td align="center">---</td>
+<td align="center">---</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<strong>Purpose &amp; Potential Exposures:</strong> Services Account ID that grants read access to the app-secmodel-data database.</p>
+<p><strong>Potential Exposures:</strong> None.</p>
+<h3 id="domain-global-groups"><strong>Domain Global Groups</strong></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Group Role</th>
+<th align="left">Owner</th>
+<th align="left">Scope of Role</th>
+<th align="left">Member of</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">NA\DCC-WINDOWS-VRA.UG</td>
+<td align="left">DCC1</td>
+<td align="left">To add as support group. Members of this group will be able to use the “on behalf” option on VRA. It contains the TA accounts (privileged accounts) of Windows teams. For now keep the minimal number of analysts that are effectively working in this new process</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">NA\DCC-WINDOWS-VRA-TESTERS.UG</td>
+<td align="left">DCC1</td>
+<td align="left">To add as end user group. Members of this group will be the users and record owners participating in the pilot. Contains their LAN IDS</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">---</td>
+<td align="left">---</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="server-local-accounts"><strong>Server Local Accounts</strong></h3>
+<p>None.</p>
+<h3 id="server-local-groups"><strong>Server Local Groups</strong></h3>
+<p>None.</p>
+<h3 id="services"><strong>Services</strong></h3>
+<p>None.</p>
+<h3 id="folder-share-permissions"><strong>Folder / Share Permissions</strong></h3>
+<p>None.</p>
+<h3 id="databases-roles"><a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-ver15"><strong>Databases Roles</strong></a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Database Role</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">db_accessadmin</td>
+<td>Members of the db_accessadmin fixed database role can add or remove access to the database for Windows logins, Windows groups, and SQL Server logins.</td>
+</tr>
+<tr>
+<td align="center">db_backupoperator</td>
+<td>Members of the db_backupoperator fixed database role can back up the database.</td>
+</tr>
+<tr>
+<td align="center">db_datareader</td>
+<td>Members of the db_datareader fixed database role can run a SELECT statement against any table or view in the database.</td>
+</tr>
+<tr>
+<td align="center">db_datawriter</td>
+<td>Members of the db_datawriter fixed database role can add, delete, or change data in all user tables.</td>
+</tr>
+<tr>
+<td align="center">db_ddladmin</td>
+<td>Members of the db_ddladmin fixed database role can run any Data Definition Language (DDL) command in a database.</td>
+</tr>
+<tr>
+<td align="center">db_denydatareader</td>
+<td>Members of the db_denydatareader fixed database role cannot read any data in the user tables within a database.</td>
+</tr>
+<tr>
+<td align="center">db_denydatawriter</td>
+<td>Members of the db_denydatawriter fixed database role cannot add, modify, or delete any data in the user tables within a database.</td>
+</tr>
+<tr>
+<td align="center">db_owner</td>
+<td>Members of the db_owner fixed database role can perform all configuration and maintenance activities on the database, and can also drop the database in SQL Server. (In SQL Database and SQL Data Warehouse, some maintenance activities require server-level permissions and cannot be performed by db_owners.)</td>
+</tr>
+<tr>
+<td align="center">db_securityadmin</td>
+<td>Members of the db_securityadmin fixed database role can modify role membership for custom roles only and manage permissions. Members of this role can potentially elevate their privileges and their actions should be monitored.</td>
+</tr>
+<tr>
+<td align="center">public</td>
+<td>Every database user belongs to the public database role. When a user has not been granted or denied specific permissions on a securable object, the user inherits the permissions granted to public on that object. Database users cannot be removed from the public role.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="database-permissions"><strong>Database Permissions</strong></h3>
+<p>None.</p>
+<h3 id="database-jobs"><strong>Database Jobs</strong></h3>
+<p>None.</p>
+<h3 id="computer-andor-user-group-policy-objects"><strong>Computer and/or User Group Policy Objects</strong></h3>
+<p>None.</p>
+<h3 id="registry-modifications"><strong>Registry Modifications</strong></h3>
+<p>None.</p>
+<h3 id="middleware-settings-iis-virtual-directories"><strong>Middleware Settings - IIS Virtual Directories</strong></h3>
+<p>None.</p>
+<h3 id="scheduled-tasks"><strong>Scheduled Tasks</strong></h3>
+<p>None.</p>
+<h3 id="ecm-monitoring"><strong>ECM Monitoring</strong></h3>
+<p>None.</p>
+<hr />
+<h3 id="security-configuration-for-the-acceptance-development-environment"><strong>Security Configuration for the Acceptance / Development Environment</strong></h3>
+<h3 id="roles-and-associated-domain-accounts_1">Roles and Associated Domain Accounts</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Account Role</th>
+<th align="center">Owner</th>
+<th align="center">Scope of Role</th>
+<th align="center">Member of</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">NA\xswinge</td>
+<td align="center">DCC1</td>
+<td align="center">Mulesoft API / Database Server</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">---</td>
+<td align="center">---</td>
+<td align="center">---</td>
+<td align="center">---</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<strong>Purpose &amp; Potential Exposures:</strong> Services Account ID that grants read access to the app-secmodel-data database.</p>
+<p><strong>Potential Exposures:</strong> None.</p>
+<h3 id="domain-global-groups_1"><strong>Domain Global Groups</strong></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Group Role</th>
+<th align="left">Owner</th>
+<th align="left">Scope of Role</th>
+<th align="left">Member of</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">NA\DCC-WINDOWS-VRA.UG</td>
+<td align="left">DCC1</td>
+<td align="left">To add as support group. Members of this group will be able to use the “on behalf” option on VRA. It contains the TA accounts (privileged accounts) of Windows teams. For now keep the minimal number of analysts that are effectively working in this new process</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">NA\DCC-WINDOWS-VRA-TESTERS.UG</td>
+<td align="left">DCC1</td>
+<td align="left">To add as end user group. Members of this group will be the users and record owners participating in the pilot. Contains their LAN IDS</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">---</td>
+<td align="left">---</td>
+<td align="left">---</td>
+<td align="left">---</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="server-local-accounts_1"><strong>Server Local Accounts</strong></h3>
+<p>None.</p>
+<h3 id="server-local-groups_1"><strong>Server Local Groups</strong></h3>
+<p>None.</p>
+<h3 id="services_1"><strong>Services</strong></h3>
+<p>None.</p>
+<h3 id="folder-share-permissions_1"><strong>Folder / Share Permissions</strong></h3>
+<p>None.</p>
+<h3 id="databases-roles_1"><a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-ver15"><strong>Databases Roles</strong></a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Database Role</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">db_accessadmin</td>
+<td>Members of the db_accessadmin fixed database role can add or remove access to the database for Windows logins, Windows groups, and SQL Server logins.</td>
+</tr>
+<tr>
+<td align="center">db_backupoperator</td>
+<td>Members of the db_backupoperator fixed database role can back up the database.</td>
+</tr>
+<tr>
+<td align="center">db_datareader</td>
+<td>Members of the db_datareader fixed database role can run a SELECT statement against any table or view in the database.</td>
+</tr>
+<tr>
+<td align="center">db_datawriter</td>
+<td>Members of the db_datawriter fixed database role can add, delete, or change data in all user tables.</td>
+</tr>
+<tr>
+<td align="center">db_ddladmin</td>
+<td>Members of the db_ddladmin fixed database role can run any Data Definition Language (DDL) command in a database.</td>
+</tr>
+<tr>
+<td align="center">db_denydatareader</td>
+<td>Members of the db_denydatareader fixed database role cannot read any data in the user tables within a database.</td>
+</tr>
+<tr>
+<td align="center">db_denydatawriter</td>
+<td>Members of the db_denydatawriter fixed database role cannot add, modify, or delete any data in the user tables within a database.</td>
+</tr>
+<tr>
+<td align="center">db_owner</td>
+<td>Members of the db_owner fixed database role can perform all configuration and maintenance activities on the database, and can also drop the database in SQL Server. (In SQL Database and SQL Data Warehouse, some maintenance activities require server-level permissions and cannot be performed by db_owners.)</td>
+</tr>
+<tr>
+<td align="center">db_securityadmin</td>
+<td>Members of the db_securityadmin fixed database role can modify role membership for custom roles only and manage permissions. Members of this role can potentially elevate their privileges and their actions should be monitored.</td>
+</tr>
+<tr>
+<td align="center">public</td>
+<td>Every database user belongs to the public database role. When a user has not been granted or denied specific permissions on a securable object, the user inherits the permissions granted to public on that object. Database users cannot be removed from the public role.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="database-permissions_1"><strong>Database Permissions</strong></h3>
+<p>None.</p>
+<h3 id="database-jobs_1"><strong>Database Jobs</strong></h3>
+<p>None.</p>
+<h3 id="computer-andor-user-group-policy-objects_1"><strong>Computer and/or User Group Policy Objects</strong></h3>
+<p>None.</p>
+<h3 id="registry-modifications_1"><strong>Registry Modifications</strong></h3>
+<p>None.</p>
+<h3 id="middleware-settings-iis-virtual-directories_1"><strong>Middleware Settings - IIS Virtual Directories</strong></h3>
+<p>None.</p>
+<h3 id="scheduled-tasks_1"><strong>Scheduled Tasks</strong></h3>
+<p>None.</p>
+<h3 id="ecm-monitoring_1"><strong>ECM Monitoring</strong></h3>
+<p>None.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.1.2
+Build Date UTC : 2020-12-14 11:22:55.968762+00:00
+-->
