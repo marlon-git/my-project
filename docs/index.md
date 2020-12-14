@@ -41,7 +41,7 @@ Ordered
   
 ### Images
 
-![DataCenter](/docs/images/WP_serverfarm_Putman_dektop.jpg)
+![DataCenter](/images/WP_serverfarm_Putman_dektop.jpg)
 
 ### Links
 
