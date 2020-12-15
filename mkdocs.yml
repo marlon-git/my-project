@@ -1,5 +1,6 @@
 site_name: Test MkDocs
 nav:
     - Home: index.md
+    - App-0001: app-001.md
     - About: about.md
 theme: readthedocs
