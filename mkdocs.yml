@@ -1,4 +1,4 @@
-site_name: Test MkDocs
+site_name: SecModel
 nav:
     - Home: index.md
     - App-0001: app-001.md
