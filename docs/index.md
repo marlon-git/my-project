@@ -1,4 +1,4 @@
-# SecModel Repository
+# SecModel Documentation Repository
 
 This is a new home for documentation
 
