@@ -1,7 +1,7 @@
 site_name: SecModel
 nav:
     - Home: index.md
-    - App-0001: app-001.md
-    - App-0002: app-002.md
+    - App-001: app-001.md
+    - App-002: app-002.md
     - About: about.md
 theme: readthedocs
